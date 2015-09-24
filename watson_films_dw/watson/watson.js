@@ -2,13 +2,13 @@
 // Specify the information and credentials pertinent to your Watson instance
 var endpoint = {
     // enter watson host name; e.g: 'http://www.myhost.com'
-    host : '',
-    
+    host : 'http://www.test1banorte.mybluemix.net',
+
     // enter watson instance name; e.g: '/deepqa/v1/question'
-    instance : '',
-    
+    instance : 'Question and Answer-9h',
+
     // enter authentication info; e.g: 'Basic c29tZXVzZXJpZDpzb21lcGFzc3dvcmQ='
-    auth : ''
+    auth : 'MZILBjRTv2w0'
 };
 
 
@@ -21,7 +21,7 @@ exports.question = function(req, res) {
 	}
     var uri = endpoint.host + endpoint.instance;
     var request = require("request");
-    
+
     // Form a proper Watson QAAPI request
     var questionEntity = {
         "question" : {
@@ -34,7 +34,7 @@ exports.question = function(req, res) {
 
     console.log('Ask Watson: ' + req.body.question + ' @ ' + uri);
 
-    // Invoke the IBM Watson QAAPI Synchronously 
+    // Invoke the IBM Watson QAAPI Synchronously
     // POST the questionEntity and handle the QAAPI response
     request({
         'uri' : uri,
