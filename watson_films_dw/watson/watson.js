@@ -17,7 +17,7 @@ var endpoint = {
 // and returns the QAAPI response.
 exports.question = function(req, res) {
 	if (!endpoint.host) {
-		res.send(404, 'Watson host information not supplied.');
+		res.send(404, 'Watson host information not supplied. intento 1');
 	}
     var uri = endpoint.host + endpoint.instance;
     var request = require("request");
